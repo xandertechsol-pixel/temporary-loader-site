@@ -5,15 +5,14 @@
 }
 
 body {
-    position: relative;
     width: 100%;
-    height: 100%;
-    min-height: 100vh;
+    height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #020202;
     overflow: hidden;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 body::before {
@@ -38,7 +37,7 @@ body::before {
     align-items: center;
     position: relative;
     padding: 0 24px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .content {
@@ -49,7 +48,7 @@ body::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 2;
 }
 
 /* Floating orbs background */
@@ -125,7 +124,7 @@ body::before {
 /* Text wrapper */
 .text-wrapper {
     position: relative;
-    z-index: 10;
+    z-index: 3;
     text-align: center;
     width: min(980px, 100%);
     padding: 28px 20px 20px;
@@ -156,11 +155,13 @@ body::before {
     padding-bottom: 0.14em;
     background: linear-gradient(135deg, #c084fc, #a855f7, #7e22ce);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    text-shadow: 0 12px 35px rgba(96, 21, 149, 0.35);
     animation: fadeInScale 1s ease-out forwards;
     letter-spacing: 0.5px;
+    position: relative;
+    z-index: 3;
 }
 
 @keyframes fadeInScale {
@@ -192,7 +193,7 @@ body::before {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    z-index: 10;
+    z-index: 3;
     animation: fadeInUp 1.5s ease-out 0.6s both;
 }
 
