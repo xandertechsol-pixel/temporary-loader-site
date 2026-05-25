@@ -9,29 +9,49 @@ A simple static landing page for a church website.
 
 ## Deploying to Vercel
 
-1. Initialize a Git repository in this folder if not already done:
+This project now uses Vite for the build system.
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Initialize a Git repository in this folder if not already done:
 
 ```bash
 git init
 ```
 
-2. Add and commit the files:
+3. Add and commit the files:
 
 ```bash
 git add .
-git commit -m "Initial landing page"
+git commit -m "Initial Vite landing page"
 ```
 
-3. Create a GitHub repository and add it as a remote, for example:
+4. Create a GitHub repository and add it as a remote, for example:
 
 ```bash
 git remote add origin https://github.com/USERNAME/REPO.git
 git push -u origin main
 ```
 
-4. Connect that repository to Vercel and deploy.
+5. Connect that repository to Vercel and deploy.
 
-5. Add your custom domain in the Vercel dashboard.
+6. Add your custom domain in the Vercel dashboard.
+
+### Local development
+
+```bash
+npm run dev
+```
+
+### Build locally
+
+```bash
+npm run build
+```
 
 ## Vercel configuration
 
