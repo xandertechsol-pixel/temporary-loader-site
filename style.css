@@ -8,11 +8,17 @@ body {
     width: 100%;
     height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #020202;
+    background-color: #000000;
+    background: #000000;
     overflow: hidden;
     margin: 0;
     padding: 0;
     display: flex;
+}
+
+html {
+    width: 100%;
+    height: 100%;
 }
 
 body::before {
@@ -147,21 +153,28 @@ body::before {
 
 .main-text {
     font-size: clamp(2rem, 8vw, 4.5rem);
-    font-weight: 800;
+    font-weight: 900;
     line-height: 1.28;
     margin: 0 auto 24px;
     width: 100%;
     overflow-wrap: break-word;
     padding-bottom: 0.14em;
-    background: linear-gradient(135deg, #c084fc, #a855f7, #7e22ce);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
     animation: fadeInScale 1s ease-out forwards;
     letter-spacing: 0.5px;
     position: relative;
     z-index: 3;
+    
+    /* Gradient text - cross-browser compatible */
+    background: linear-gradient(90deg, #c084fc 0%, #a855f7 50%, #7e22ce 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.main-text::selection {
+    -webkit-text-fill-color: #a855f7;
+    background: rgba(168, 85, 247, 0.2);
 }
 
 @keyframes fadeInScale {
@@ -177,12 +190,14 @@ body::before {
 
 .subtitle {
     font-size: clamp(1rem, 3vw, 1.5rem);
-    color: rgba(216, 180, 254, 0.95);
+    color: #d8b4fe;
     font-weight: 300;
     letter-spacing: 2px;
     animation: fadeInUp 1.2s ease-out 0.3s both;
     text-transform: uppercase;
     margin: 0;
+    position: relative;
+    z-index: 3;
 }
 
 .loader {
