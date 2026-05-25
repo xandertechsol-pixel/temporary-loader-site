@@ -1,0 +1,9 @@
+# Ignore common OS and editor files
+.DS_Store
+Thumbs.db
+
+# Node modules not used but safe to ignore
+node_modules/
+
+# Vercel local configuration
+.vercel/
